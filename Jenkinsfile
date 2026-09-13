@@ -19,6 +19,13 @@ pipeline {
                 sh 'npm install'
             }
         }
+		
+		stage('Install Dependencies') {
+			steps {
+				sh 'npm install'
+				sh 'chmod +x node_modules/.bin/*'
+			}
+		}
 
         stage('Run Tests') {
             steps {

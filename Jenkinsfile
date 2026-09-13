@@ -44,7 +44,7 @@ pipeline {
 
         stage('Smoke Test') {
             steps {
-                sh 'sleep 3 && curl -f http://localhost:4000/health'
+                sh 'sleep 3 && curl -f http://host.docker.internal:4000/health'
             }
         }
     }
